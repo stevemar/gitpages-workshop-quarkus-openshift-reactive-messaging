@@ -1,8 +1,8 @@
 # Exercise 2: Reactive Messaging with MicroProfile
 
-In this lab you'll learn how to use reactive messaging with [MicroProfile Messaging](https://download.eclipse.org/microprofile/microprofile-reactive-messaging-1.0/microprofile-reactive-messaging-spec.html). With simple Java annotations messages can be sent and received in memory as well as via [Apache Kafka](https://kafka.apache.org/). 
+In this lab you'll learn how to use reactive messaging with [MicroProfile Messaging](https://download.eclipse.org/microprofile/microprofile-reactive-messaging-1.0/microprofile-reactive-messaging-spec.html). With simple Java annotations messages can be sent and received in memory as well as via [Apache Kafka](https://kafka.apache.org/).
 
-MicroProfile Messaging implements the [Reactive Streams](https://www.reactive-streams.org/) standard which defines how to do asynchronous stream processing for different programming languages independently from specific libraries. 
+MicroProfile Messaging implements the [Reactive Streams](https://www.reactive-streams.org/) standard which defines how to do asynchronous stream processing for different programming languages independently from specific libraries.
 
 The interfaces of the main Reactive Streams components [Subscriber, Publisher and Processor](https://docs.oracle.com/javase/9/docs/api/java/util/concurrent/Flow.html) have been available since JDK 9. The implementation of these interfaces is provided by MicroProfile.
 
@@ -37,7 +37,7 @@ System.out.println("Here you can add process functionality");
 
 Exit the Editor via 'Ctrl-X', 'y' and 'Enter'.
 
-Confirm that the changes have been saved. 
+Confirm that the changes have been saved.
 
 ```sh
 cd ~/cloud-native-starter/reactive/web-api-reactive/src/main/java/com/ibm/webapi/apis
@@ -113,4 +113,3 @@ oc logs web-api-reactive-xxxxxxxxxxx-xxxxx
 ![](../../images/microprofile-kafka10.png)
 
 Your added line shows up in the logs now.
-

@@ -1,6 +1,6 @@
 # Exercise 5 (Optional): Use distributed Logging
 
-Cloud native applications based on microservices contain many parts that create logs. A logging service that is able to collect all distributed logs in one place is a highly recommended tool. There are many logging solutions that you can install directly into your Kubernetes or OpenShift cluster. But then you have an additional application that needs to be maintained and one that needs persistent storage as well to store logs for a period of time. 
+Cloud native applications based on microservices contain many parts that create logs. A logging service that is able to collect all distributed logs in one place is a highly recommended tool. There are many logging solutions that you can install directly into your Kubernetes or OpenShift cluster. But then you have an additional application that needs to be maintained and one that needs persistent storage as well to store logs for a period of time.
 
 IBM Cloud offers "Logging as a Service" in the form of [IBM Log Analysis with LogDNA](https://cloud.ibm.com/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-getting-started#getting-started). It offers features to filter, search, and tail log data, define alerts, and design custom views to monitor application and system logs. You can test "IBM Log Analysis with LogDNA" for free with somewhat limited capabilities and we will show you in this lab how to connect your OpenShift cluster to an instance of it.
 
@@ -32,11 +32,10 @@ Select the 'OpenShift' tab. Copy, paste, and execute the commands into your IBM 
 
 ![](../../images/log5.png)
 
-
 In the Cloud Shell check that the logging agent is running.
 
 ```
-$ oc get all -n ibm-observe
+oc get all -n ibm-observe
 ```
 
 ![](../../images/log6.png)
@@ -54,10 +53,10 @@ Click 'View LogDNA'.
 In Lab 4 [Deploying Sample Application](lab4.md) you have deployed an instance of the 'Articles' service called 'articles-reactive'. We will check LogDNA for output from this instance. Execute the following commands in the Cloud Shell:
 
 ```
-$ oc project cloud-native-starter
-$ watch curl -X GET "http://$(oc get route articles-reactive -o jsonpath={.spec.host})/v2/articles?amount=10" -H "accept: application/json"  
+oc project cloud-native-starter
+watch curl -X GET "http://$(oc get route articles-reactive -o jsonpath={.spec.host})/v2/articles?amount=10" -H "accept: application/json"
 ```
-   
+
 The "watch" command will constantly (every 2 seconds) request articles information.
 
 Refresh your browser tab with the LogDNA dashboard and insert in the search field "getArticlesReactive".

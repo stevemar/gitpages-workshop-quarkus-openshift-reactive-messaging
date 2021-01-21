@@ -7,7 +7,7 @@ In this short exercise you'll deploy Kafka, PostgreSQL, and the Microservices of
 Invoke the following command:
 
 ```
-bash ~/cloud-native-starter/reactive/os4-scripts/deploy-example.sh 
+bash ~/cloud-native-starter/reactive/os4-scripts/deploy-example.sh
 ```
 
 > The deployment takes approximately `10 minutes`.
@@ -17,7 +17,6 @@ The script console output shows links to the Microservices and the Web-App at th
 The following `35 sec` YouTube video shows a example execution of the script and the test of the application.
 
 [![](https://img.youtube.com/vi/RYGCrsR37Go/0.jpg)](https://www.youtube.com/watch?v=RYGCrsR37Go "Click play on youtube")
-
 
 ### Step 2: Launch the web application
 
@@ -62,6 +61,3 @@ The previous steps have create build configs, builds and image streams.
 ![](../../images/verify-app3.png)
 
 ![](../../images/verify-app4.png)
-
-
-

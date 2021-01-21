@@ -114,4 +114,3 @@ oc logs articles-reactive-xxxxxxxxxxx-xxxxx
 ![](../../images/event-bus10.png)
 
 Your added line shows up in the logs now.
-

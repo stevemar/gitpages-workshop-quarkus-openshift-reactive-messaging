@@ -1,6 +1,6 @@
 # Exercise 3: Server Sent Events
 
-In this lab you'll learn how to expose streaming endpoints so that web applications are notified via [Server Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events). 
+In this lab you'll learn how to expose streaming endpoints so that web applications are notified via [Server Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events).
 
 The web application 'Web-App' receives notifications from the 'Web-API' service.
 
@@ -26,7 +26,7 @@ cat Home.vue
 The sample already comes with a working endpoint. Let's delete the file and recreate it from scratch.
 
 ```sh
-cd ~/cloud-native-starter/reactive/web-api-reactive/src/main/java/com/ibm/webapi/apis/ 
+cd ~/cloud-native-starter/reactive/web-api-reactive/src/main/java/com/ibm/webapi/apis/
 rm NewArticlesStreamResource.java
 touch NewArticlesStreamResource.java
 nano NewArticlesStreamResource.java
@@ -53,7 +53,7 @@ public class NewArticlesStreamResource {
 }
 ```
 
-In [exercise 2](../exercise-02/exercise-02.md) you saw how to publish messages to the in-memory channel 'stream-new-article'. A publisher to this channel can easily be injected via @Inject and @Channel. 
+In [exercise 2](../exercise-02/exercise-02.md) you saw how to publish messages to the in-memory channel 'stream-new-article'. A publisher to this channel can easily be injected via @Inject and @Channel.
 
 ```java
     @Inject
@@ -65,9 +65,9 @@ Last, but not least, add the implementation of the streaming endpoint. The media
 ```java
     @GET
     @Path("/server-sent-events")
-    @Produces(MediaType.SERVER_SENT_EVENTS) 
-    @SseElementType("text/plain") 
-    public Publisher<String> stream() { 
+    @Produces(MediaType.SERVER_SENT_EVENTS)
+    @SseElementType("text/plain")
+    public Publisher<String> stream() {
         return newArticles;
     }
 ```
@@ -104,7 +104,7 @@ Make sure all four pods in the 'cloud-native-starter' project are running. Note 
 To launch the application get the URLs via the following command.
 
 ```
-$ ~/cloud-native-starter/reactive/os4-scripts/show-urls.sh
+~/cloud-native-starter/reactive/os4-scripts/show-urls.sh
 ```
 
 ![](../../images/verify-app5.png)
@@ -112,4 +112,3 @@ $ ~/cloud-native-starter/reactive/os4-scripts/show-urls.sh
 Open the web application in a browser. Then invoke the curl post command. The web application should show the new entry.
 
 ![](../images/verify-app6.png)
-

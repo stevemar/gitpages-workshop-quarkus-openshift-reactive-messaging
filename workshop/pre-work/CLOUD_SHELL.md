@@ -16,7 +16,7 @@ This is what you should see:
 
 ![](../../images/cloud-shell.png)
 
-When using OpenShift locally, you need a local terminal and the following tools: 
+When using OpenShift locally, you need a local terminal and the following tools:
 
 * [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * [curl](https://curl.haxx.se/download.html)
@@ -29,7 +29,7 @@ When using OpenShift locally, you need a local terminal and the following tools:
 In the IBM Cloud Shell execute the following command:
 
 ```
-$ git clone https://github.com/IBM/cloud-native-starter.git
+git clone https://github.com/IBM/cloud-native-starter.git
 ```
 
 ![](../../images/cloud-shell-clone.png)
@@ -50,7 +50,7 @@ Open the OpenShift web console.
 
 ![Open the OpenShift web console](../../images/openshift-console-launch3.png)
 
-From the dropdown menu in the upper right of the page, click 'Copy Login Command'. 
+From the dropdown menu in the upper right of the page, click 'Copy Login Command'.
 
 ![](../../images/openshift-login1.png)
 
@@ -61,8 +61,7 @@ Click on 'Display Token', then copy and paste the command 'Log in with this toke
 Login to OpenShift in IBM Cloud Shell
 
 ```
-$ oc login https://c1XX-XX-X.containers.cloud.ibm.com:XXXXX --token=xxxxxx'
+oc login https://c1XX-XX-X.containers.cloud.ibm.com:XXXXX --token=xxxxxx'
 ```
 
 ![](../../images/openshift-login3.png)
-
