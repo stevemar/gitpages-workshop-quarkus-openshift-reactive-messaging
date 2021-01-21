@@ -8,13 +8,13 @@ When using OpenShift on IBM Cloud no client side setup is required for this work
 
 In your browser, login to the [IBM Cloud](https://cloud.ibm.com) Dashboard. Make sure you select your own account in the account list at the top, then click on the IBM Cloud Shell icon.
 
-![](../../images/cloud-shell-launch.png)
+![](../images/cloud-shell-launch.png)
 
 Note: Your workspace includes 500 MB of temporary storage. This session will close after an hour of inactivity. If you don't have any active sessions for an hour or you reach the 30-hour weekly usage limit, your workspace data is removed.
 
 This is what you should see:
 
-![](../../images/cloud-shell.png)
+![](../images/cloud-shell.png)
 
 When using OpenShift locally, you need a local terminal and the following tools:
 
@@ -32,7 +32,7 @@ In the IBM Cloud Shell execute the following command:
 git clone https://github.com/IBM/cloud-native-starter.git
 ```
 
-![](../../images/cloud-shell-clone.png)
+![](../images/cloud-shell-clone.png)
 
 ### Step 3. Get Access to OpenShift
 
@@ -40,23 +40,23 @@ Open the [IBM Cloud Dashboard](https://cloud.ibm.com). In the row at the top swi
 
 The select 'OpenShift' in the burger menu in the upper left corner followed by 'Clusters'.
 
-![](../../images/openshift-console-launch1.png)
+![](../images/openshift-console-launch1.png)
 
 Click on your cluster.
 
-![](../../images/openshift-console-launch2.png)
+![](../images/openshift-console-launch2.png)
 
 Open the OpenShift web console.
 
-![Open the OpenShift web console](../../images/openshift-console-launch3.png)
+![Open the OpenShift web console](../images/openshift-console-launch3.png)
 
 From the dropdown menu in the upper right of the page, click 'Copy Login Command'.
 
-![](../../images/openshift-login1.png)
+![](../images/openshift-login1.png)
 
 Click on 'Display Token', then copy and paste the command 'Log in with this token' into your terminal in the IBM Cloud Shell.
 
-![](../../images/openshift-login2.png)
+![](../images/openshift-login2.png)
 
 Login to OpenShift in IBM Cloud Shell
 
@@ -64,4 +64,4 @@ Login to OpenShift in IBM Cloud Shell
 oc login https://c1XX-XX-X.containers.cloud.ibm.com:XXXXX --token=xxxxxx'
 ```
 
-![](../../images/openshift-login3.png)
+![](../images/openshift-login3.png)

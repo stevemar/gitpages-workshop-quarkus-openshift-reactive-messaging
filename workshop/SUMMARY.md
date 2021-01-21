@@ -17,10 +17,10 @@
 
 ### Build new version of the Microservice
 
-* [Exercise 2 - Reactive Messaging with MicroProfile](exercise-02/README.md) 
+* [Exercise 2 - Reactive Messaging with MicroProfile](exercise-02/README.md)
 * [Exercise 3 - Server Sent Events](exercise-03/README.md)
 * [Exercise 4 - Vert.x Event Bus](exercise-04/README.md)
-* [Exercise 5 (optional) - Use distributed Logging](exercise-05/README.md) 
+* [Exercise 5 (optional) - Use distributed Logging](exercise-05/README.md)
 
 ### Resources
 
@@ -29,4 +29,3 @@
 * [Workshop: Reactive Endpoint with Quarkus on OpenShift](https://github.com/IBM/workshop-quarkus-openshift-reactive-endpoints)
 * [Cloud-Native-Starter project](https://github.com/IBM/cloud-native-starter)
 * [Cloud-Native-Starter project reactive](https://github.com/IBM/cloud-native-starter/tree/master/reactive)
-

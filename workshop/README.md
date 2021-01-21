@@ -10,7 +10,7 @@ The workshop uses a sample application to demonstrate reactive functionality. Th
 
 Articles can be created via REST API. The web application receives a notification and adds the new article to the page. The animation shows how curl requests are executed at the bottom which trigger updates to the web application at the top.
 
-![video](../images/demo-1-video-small.gif)
+![video](images/demo-1-video-small.gif)
 
 ### Architecture
 
@@ -21,7 +21,7 @@ The next diagram explains the flow between the different components and microser
 3. The 'Web-API' provides a streaming endpoint
 4. The web application 'Web-App' consumes the streaming endpoint
 
-![demo](../images/demo-1-small.png)
+![demo](images/demo-1-small.png)
 
 Note that in this workshop you will deploy the full application as described in the previous diagram. But to simplify the workshop you'll re-implement a simpler version of the 'Web-API' service which only invokes the 'Articles' service.
 
@@ -59,10 +59,10 @@ These are the labs of this workshop, go through all of them in sequence, start w
 | - | - |
 | [Pre work](pre-work/README.md) | Create your Cloud Environment |
 | [Exercise 1](exercise-01/README.md) | Deploy example application via Script |
-| [Exercise 2](exercise-04/README.md) | Reactive Messaging with MicroProfile |
-| [Exercise 3](exercise-05/README.md) | Server Sent Events |
-| [Exercise 4](exercise-06/README.md) | Vert.x Event Bus |
-| [Exercise 5 (optional)](exercise-07/README.md) | Use distributed Logging |
+| [Exercise 2](exercise-02/README.md) | Reactive Messaging with MicroProfile |
+| [Exercise 3](exercise-03/README.md) | Server Sent Events |
+| [Exercise 4](exercise-04/README.md) | Vert.x Event Bus |
+| [Exercise 5 (optional)](exercise-05/README.md) | Use distributed Logging |
 
 ### Compatibility
 

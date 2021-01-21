@@ -4,7 +4,7 @@ The [Vert.x Event Bus](https://vertx.io/docs/vertx-core/java/#event_bus) allows 
 
 In this lab you'll learn how to use the bus to communicate in-memory between different layers of the 'Articles' service.
 
-![](../../images/event-bus1.png)
+![](../images/event-bus1.png)
 
 The 'Articles' service uses a clean architecture approach. There are three different layers:
 
@@ -14,7 +14,7 @@ The 'Articles' service uses a clean architecture approach. There are three diffe
 
 The API layer contains the implementation of the REST APIs and the external messaging interfaces. The data layer contains the implementation of the persistence and could include calls to other external services. The API layer and the data layer can be easily replaced without changing the business logic.
 
-![](../../images/event-bus2.png)
+![](../images/event-bus2.png)
 
 In this lab you'll use the event bus to communicate between the business and the API layers.
 
@@ -27,7 +27,7 @@ cd ~/cloud-native-starter/reactive/articles-reactive/src/main/java/com/ibm/artic
 cat business/ArticleService.java
 ```
 
-![](../../images/event-bus3.png)
+![](../images/event-bus3.png)
 
 An instance of the bus can be injected via @Inject.
 
@@ -42,7 +42,7 @@ cd ~/cloud-native-starter/reactive/articles-reactive/src/main/java/com/ibm/artic
 nano business/ArticleService.java
 ```
 
-![](../../images/event-bus4.png)
+![](../images/event-bus4.png)
 
 Exit the Editor via 'Ctrl-X', 'y' and 'Enter'.
 
@@ -61,7 +61,7 @@ cd ~/cloud-native-starter/reactive/articles-reactive/src/main/java/com/ibm/artic
 nano apis/NewArticleCreatedListener.java
 ```
 
-![](../../images/event-bus5.png)
+![](../images/event-bus5.png)
 
 Exit the Editor via 'Ctrl-X', 'y' and 'Enter'.
 
@@ -72,15 +72,15 @@ cd ~/cloud-native-starter/reactive/articles-reactive
 oc start-build articles-reactive --from-dir=.
 ```
 
-![](../../images/event-bus6.png)
+![](../images/event-bus6.png)
 
 Wait until the build has been completed.
 
-![](../../images/event-bus7.png)
+![](../images/event-bus7.png)
 
 Delete the articles pod. This will trigger Kubernetes to start a new pod with the latest version of the image.
 
-![](../../images/event-bus8.png)
+![](../images/event-bus8.png)
 
 ### Step 4: Deploy new Version
 
@@ -90,12 +90,12 @@ Create a new article by invoking a curl post command. You can get the URL from t
 ~/cloud-native-starter/reactive/os4-scripts/show-urls.sh
 ```
 
-![](../../images/microprofile-kafka8.png)
+![](../images/microprofile-kafka8.png)
 
 In order to see the logs, you can do two things:
 
 1. Use the following instructions which leverage a terminal
-2. Use distributed logging as documented in [lab 8](lab8.md)
+2. Use distributed logging as documented in [Lab 5](../exercise-05/README.md)
 
 In the terminal get the pod name:
 
@@ -103,7 +103,7 @@ In the terminal get the pod name:
 oc get pods
 ```
 
-![](../../images/event-bus9.png)
+![](../images/event-bus9.png)
 
 After this invoke this command to display the logs of the pod.
 
@@ -111,6 +111,6 @@ After this invoke this command to display the logs of the pod.
 oc logs articles-reactive-xxxxxxxxxxx-xxxxx
 ```
 
-![](../../images/event-bus10.png)
+![](../images/event-bus10.png)
 
 Your added line shows up in the logs now.

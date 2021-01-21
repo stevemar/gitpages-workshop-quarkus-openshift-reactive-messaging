@@ -12,25 +12,25 @@ For the following instructions use the IBM Cloud Shell to enter the commands.
 
 In your browser log in to the [IBM Cloud dashboard](https://cloud.ibm.com/). Make sure you are using **your own account**. From the 'burger menu' in the upper left corner select 'Observability'.
 
-![ldna-1](../../images/log1.png)
+![ldna-1](../images/log1.png)
 
 Create an 'IBM Log Analysis with LogDNA' instance by clicking on 'Create new'.
 
-![ldna-1](../../images/log2.png)
+![ldna-1](../images/log2.png)
 
 On the 'Create' tab leave all defaults. All you have to do is to create the big blue 'Create' button.
 
-![ldna-1](../../images/log3.png)
+![ldna-1](../images/log3.png)
 
 ### Step 2: Configure LogDNA
 
 Select 'Edit log sources'.
 
-![](../../images/log4.png)
+![](../images/log4.png)
 
 Select the 'OpenShift' tab. Copy, paste, and execute the commands into your IBM Cloud Shell:
 
-![](../../images/log5.png)
+![](../images/log5.png)
 
 In the Cloud Shell check that the logging agent is running.
 
@@ -38,19 +38,19 @@ In the Cloud Shell check that the logging agent is running.
 oc get all -n ibm-observe
 ```
 
-![](../../images/log6.png)
+![](../images/log6.png)
 
 ### Step 3: Use LogDNA
 
 Go back to the [IBM Cloud dashboard](https://cloud.ibm.com/). Make sure you are using your own account. From the 'burger menu' in the upper left corner select 'Observability' and then 'Logging'.
 
-![](../../images/log7.png)
+![](../images/log7.png)
 
 Click 'View LogDNA'.
 
-![](../../images/log8.png)
+![](../images/log8.png)
 
-In Lab 4 [Deploying Sample Application](lab4.md) you have deployed an instance of the 'Articles' service called 'articles-reactive'. We will check LogDNA for output from this instance. Execute the following commands in the Cloud Shell:
+In Lab 4 [Deploying Sample Application](../exercise-04/README.md) you have deployed an instance of the 'Articles' service called 'articles-reactive'. We will check LogDNA for output from this instance. Execute the following commands in the Cloud Shell:
 
 ```
 oc project cloud-native-starter
@@ -61,21 +61,21 @@ The "watch" command will constantly (every 2 seconds) request articles informati
 
 Refresh your browser tab with the LogDNA dashboard and insert in the search field "getArticlesReactive".
 
-![](../../images/log9.png)
+![](../images/log9.png)
 
 Note: If you don't see "getArticlesReactive" wait a little longer (with the free/lite version it can take several minutes before data shows up), then refresh the browser tab of the LogDNA dashboard again.
 
 Select 'Unsaved View' and then 'Save as new/alert'.
 
-![](../../images/log10.png)
+![](../images/log10.png)
 
 Give the view a ane and press 'Save View'.
 
-![](../../images/log11.png)
+![](../images/log11.png)
 
 From now the new view is available under 'Views'.
 
-![](../../images/log12.png)
+![](../images/log12.png)
 
 ---
 
